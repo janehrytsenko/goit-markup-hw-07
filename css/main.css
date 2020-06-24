@@ -1,30 +1,268 @@
-/* цвет основного текста #212121*/
+@charset "UTF-8";
+/*! modern-normalize v0.6.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
-/* цвет вторичного текста #757575*/
-
-/*#2196F3 акцент синий*/
-
-/*#FFFFFF белый*/
-
-/* вторичный цвет фона #F5F4FA */
-
-/* футер копирайт rgba(255, 255, 255, 0.4); */
+/**
+Use a more readable tab size (opinionated).
+*/
 :root {
-  --primary-text-color: #757575;
-  --title-text-color: #212121;
-  --accent-color: #2196f3;
-  --primary-white-color: #ffffff;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
 }
 
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+Sections
+========
+*/
+/**
+Remove the margin in all browsers.
+*/
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: var(--primary-white-color);
-  color: var(--primary-text-color);
+  margin: 0;
 }
 
-/* утилиты */
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
 
-a {
+/*
+Grouping content
+================
+*/
+/**
+Add the correct height in Firefox.
+*/
+hr {
+  height: 0;
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Correct the padding in Firefox.
+*/
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+.main-nav, .contacts {
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+  color: #757575;
+}
+
+.logo, .main-nav .link, .contacts-link, .workers-link, .clients-link, .footer-logo, address a {
   text-decoration: none;
 }
 
@@ -36,22 +274,22 @@ a {
   padding-right: 15px;
 }
 
-.list {
+.main-nav, .contacts, .benefits-flex, .products-flex, .workers-flex, .workers-socials.list, .clients-flex, .footer-flex {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-p {
+.benefits-text {
   margin: 0px;
 }
 
-img {
+.image {
   display: block;
   max-width: 100%;
 }
 
-.visually-hidden {
+.benefits-title {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -62,40 +300,59 @@ img {
   overflow: hidden;
 }
 
-/* шапка */
-
-.header-flex {
-  display: flex;
-  align-items: center;
+.hero-button, .button-send {
+  display: inline-block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 32px;
+  border: 0px;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: #2196f3;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  cursor: pointer;
 }
 
-/* навигация  */
+.header-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 .site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* лого */
-
 .logo {
   padding: 24px 0px;
-  color: var(--title-text-color);
+  color: #212121;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1;
   letter-spacing: 0.03em;
-  text-decoration: none;
 }
 
 .web {
-  color: var(--accent-color);
+  color: #2196f3;
 }
 
-/* главная навигация  */
-
 .main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 86px;
 }
@@ -104,25 +361,25 @@ img {
   position: relative;
   display: block;
   padding: 32px 0px;
-  color: var(--title-text-color);
+  color: #212121;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-nav .link:hover, .main-nav .link:focus {
+  color: #2196f3;
 }
 
 .main-nav > li:not(:last-child) {
   margin-right: 50px;
 }
 
-.main-nav .link:hover,
-.main-nav .link:focus {
-  color: var(--accent-color);
-}
-
 .main-nav .link.current {
-  color: var(--accent-color);
+  color: #2196f3;
 }
 
 .main-nav .link.current::after {
@@ -134,31 +391,36 @@ img {
   width: 100%;
   height: 5px;
   border-radius: 2px;
-  background-color: var(--accent-color);
+  background-color: #2196f3;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* контакты */
-
 .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: auto;
 }
 
 .contacts-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  color: var(--primary-text-color);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #757575;
   font-weight: 500;
   font-size: 14px;
   line-height: 1;
   letter-spacing: 0.02em;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-link:hover,
-.contacts-link:focus {
-  color: var(--accent-color);
+.contacts-link:hover, .contacts-link:focus {
+  color: #2196f3;
 }
 
 .icon {
@@ -174,16 +436,10 @@ img {
   margin-left: 30px;
 }
 
-/* герой */
-
 .hero-content {
   padding: 200px;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)
-    ),
-    url("../images/hero/hero.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url("../images/hero/hero.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -197,28 +453,14 @@ img {
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
-  color: var(--primary-white-color);
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.38;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-.hero-button {
-  display: inline-block;
-  align-items: center;
-  padding: 10px 32px;
-  border: 0px;
-  border-radius: 4px;
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
-  letter-spacing: 0.06em;
-  cursor: pointer;
 }
 
 .backdrop {
@@ -230,7 +472,7 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 3;
   opacity: 1;
-
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -240,7 +482,8 @@ img {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.1);
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+          transform: translate(-50%, -50%) scale(1.1);
 }
 
 .modal {
@@ -250,15 +493,20 @@ img {
   padding: 40px 40px;
   width: 528px;
   height: 581px;
-
   background-color: #fff;
-
-  transform: translate(-50%, -50%) scale(1);
-
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-title {
+.modal {
+  font-family: "Roboto", sans-serif;
+}
+
+.form-title {
   margin-top: 0px;
   margin-bottom: 30px;
   font-weight: 700;
@@ -274,16 +522,42 @@ img {
   margin-bottom: 28px;
 }
 
+.form-field:focus-within > .form-label {
+  color: #2196f3;
+  font-size: 12px;
+  -webkit-transform: translateY(-42px) translateX(-32px);
+          transform: translateY(-42px) translateX(-32px);
+}
+
+.form-field:focus-within > .form-icon {
+  fill: #2196f3;
+}
+
 .form-label {
   position: absolute;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
   top: 50%;
   left: 42px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-label,
+.form-comment {
+  color: #757575;
 }
 
 .form-input,
 .form-textarea {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -298,35 +572,26 @@ img {
   height: 40px;
 }
 
+.form-input:hover, .form-input:focus {
+  border: 1px solid #2196f3;
+}
+
+.form-input:not(:placeholder-shown) + .form-label {
+  -webkit-transform: translateY(-42px) translateX(-32px);
+          transform: translateY(-42px) translateX(-32px);
+}
+
 .form-icon {
   position: absolute;
   display: inline-block;
   top: 50%;
   left: 16px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  fill: #212121;
-}
-
-.form-field:focus-within > .form-label {
-  transform: translateY(-42px) translateX(-32px);
-}
-
-.form-input:focus,
-.form-textarea:focus {
-  border: 1px solid var(--accent-color);
-}
-
-.form-field:focus-within > .form-label {
-  color: var(--accent-color);
-}
-
-.form-field:focus-within > .form-icon {
-  fill: var(--accent-color);
-}
-
-.form-input:not(:placeholder-shown) + .form-label {
-  transform: translateY(-42px) translateX(-32px);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field-comment {
@@ -334,38 +599,56 @@ img {
   margin-bottom: 20px;
 }
 
+.form-field-comment:focus-within > .form-comment {
+  -webkit-transform: translateY(-42px);
+          transform: translateY(-42px);
+  color: #2196f3;
+  font-size: 12px;
+}
+
 .form-textarea {
   display: block;
   resize: none;
   padding: 12px 16px;
   width: 100%;
-  height: 140px;
+  height: 120px;
+}
+
+.form-textarea:hover, .form-textarea:focus {
+  border: 1px solid #2196f3;
+}
+
+.form-textarea:not(:placeholder-shown) + .form-comment {
+  -webkit-transform: translateY(-42px);
+          transform: translateY(-42px);
 }
 
 .form-comment {
   position: absolute;
   top: 20px;
   left: 16px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-field-comment:focus-within > .form-comment {
-  color: var(--accent-color);
-}
-
-.form-field-comment:focus-within > .form-comment {
-  transform: translateY(-42px);
-}
-
-.form-textarea:not(:placeholder-shown) + .form-comment {
-  transform: translateY(-42px);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
 }
 
 .form-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .input-checkbox {
@@ -379,20 +662,23 @@ img {
   overflow: hidden;
 }
 
+.input-checkbox:checked + .icon-checkbox,
+.input-checkbox:checked:focus + .icon-checkbox {
+  border: none;
+  width: 15px;
+  height: 16px;
+  background-image: url("../images/modal-icons/icon-checked.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 2px;
+}
+
 .icon-checkbox {
   margin-right: 5px;
   width: 15px;
   height: 16px;
-  background-image: url("../images/modal-icons/icon-checkbox.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.input-checkbox:checked + .icon-checkbox,
-.input-checkbox:checked:focus + .icon-checkbox {
-  background-image: url("../images/modal-icons/icon-checked.svg");
-  background-size: contain;
-  border-radius: 2px;
+  border: 2px solid black;
+  border-radius: 20%;
 }
 
 .label-checkbox {
@@ -404,28 +690,17 @@ img {
 }
 
 .text-link {
-  color: var(--accent-color);
+  color: #2196f3;
   text-decoration: underline;
 }
 
 .button-send {
-  display: inline-block;
-  align-items: center;
-  padding: 10px 32px;
   margin-top: 30px;
-  border: 0px;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  color: var(--primary-white-color);
-  background-color: #2196f3;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
-  letter-spacing: 0.06em;
-  cursor: pointer;
 }
 
 .btn-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   top: 1%;
@@ -440,12 +715,9 @@ img {
   cursor: pointer;
 }
 
-.btn-close:hover,
-.btn-close:focus {
+.btn-close:hover, .btn-close:focus {
   fill: var(--accent-color);
 }
-
-/* преимущества */
 
 .benefits {
   padding: 94px 0px;
@@ -453,8 +725,11 @@ img {
 }
 
 .benefits-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .benefits-item {
@@ -480,7 +755,8 @@ img {
 .benefits-subtitle {
   margin-top: 30px;
   margin-bottom: 10px;
-  color: var(--title-text-color);
+  font-family: "Roboto", sans-serif;
+  color: #212121;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
@@ -488,15 +764,15 @@ img {
 }
 
 .benefits-text {
+  font-family: "Roboto", sans-serif;
+  color: #757575;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
 
-/* предоставляемые услуги */
-
-.products .container {
+.products {
   padding-top: 94px;
   padding-bottom: 94px;
   border-top: 1px solid #ececec;
@@ -505,7 +781,7 @@ img {
 .products-title {
   margin-top: 0;
   margin-bottom: 50px;
-  color: var(--title-text-color);
+  color: #212121;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -514,8 +790,11 @@ img {
 }
 
 .products-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .products-item {
@@ -536,9 +815,10 @@ img {
   bottom: 0;
   margin: 0;
   padding: 27px;
-  color: var(--primary-white-color);
+  color: #ffffff;
   background: rgba(47, 48, 58, 0.8);
   border-radius: 0px 0px 4px 4px;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -546,8 +826,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-
-/* команда */
 
 .workers {
   padding-top: 94px;
@@ -558,7 +836,8 @@ img {
 .workers-title {
   margin-top: 0;
   margin-bottom: 50px;
-  color: var(--title-text-color);
+  color: #212121;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -567,8 +846,11 @@ img {
 }
 
 .workers-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .workers-item {
@@ -576,9 +858,9 @@ img {
   margin-right: 30px;
   padding-bottom: 24px;
   border-radius: 4px;
-  background-color: var(--primary-white-color);
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 .workers-item:nth-child(4n) {
@@ -588,7 +870,8 @@ img {
 .workers-subtitle {
   margin-top: 30px;
   margin-bottom: 0px;
-  color: var(--title-text-color);
+  color: #212121;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
@@ -598,7 +881,8 @@ img {
 
 .workers-text {
   margin-top: 10px;
-  color: var(--primary-text-color);
+  color: #757575;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
@@ -607,8 +891,12 @@ img {
 }
 
 .workers-socials.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 16px;
 }
 
@@ -621,33 +909,35 @@ img {
 }
 
 .workers-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   color: #afb1b8;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.workers-link:hover, .workers-link:focus {
+  color: #ffffff;
+  background-color: #2196f3;
 }
 
 .social-icon {
   fill: currentColor;
 }
 
-.social-icon:hover,
-.social-icon:focus {
-  fill: var(--primary-white-color);
+.social-icon:hover, .social-icon:focus {
+  fill: #ffffff;
 }
-
-.workers-link:hover,
-.workers-link:focus {
-  color: var(--primary-white-color);
-  background-color: #2196f3;
-}
-
-/* клиенты */
 
 .clients {
   padding-top: 94px;
@@ -657,7 +947,8 @@ img {
 .clients-title {
   margin-top: 0px;
   margin-bottom: 50px;
-  color: var(--title-text-color);
+  color: #212121;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.2;
@@ -666,18 +957,20 @@ img {
 }
 
 .clients-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .clients-item {
   width: 170px;
-  background-color: var(--primary-white-color);
-}
-
-.clients-item {
   margin-right: 30px;
+  background-color: #ffffff;
 }
 
 .clients-item:nth-child(6n) {
@@ -685,21 +978,26 @@ img {
 }
 
 .clients-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 170px;
   height: 90px;
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-link:hover,
-.clients-link:focus {
-  color: var(--accent-color);
+.clients-link:hover, .clients-link:focus {
+  color: #2196f3;
   border-color: #2196f3;
 }
 
@@ -708,20 +1006,22 @@ img {
   cursor: pointer;
 }
 
-/* футер */
-
 footer {
   background-color: #2f303a;
 }
 
 .footer-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 48px;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .footer-logo {
-  color: var(--primary-white-color);
+  color: #ffffff;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 22px;
@@ -732,7 +1032,7 @@ footer {
 address a {
   display: block;
   margin-top: 10px;
-  color: var(--primary-white-color);
+  color: #ffffff;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -755,7 +1055,6 @@ address a {
 }
 
 /* соцсети */
-
 .footer-join {
   display: block;
   margin-left: 69px;
@@ -771,8 +1070,12 @@ address a {
 }
 
 .footer-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 21px;
 }
 
@@ -785,15 +1088,21 @@ address a {
 }
 
 .socials-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon.footer {
@@ -804,62 +1113,6 @@ address a {
 .socials-link:focus {
   color: var(--primary-white-color);
   background-color: #2196f3;
-}
-
-.label-subscription {
-  margin-left: 94px;
-  color: var(--primary-white-color);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.form-subscription {
-  display: flex;
-  margin-top: 20px;
-  margin-left: 94px;
-}
-
-.form-subscription input {
-  padding: 18px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  width: 358px;
-  height: 50px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.03em;
-  background-color: #2f303a;
-}
-
-.form-subscription input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.form-subscription button {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 12px;
-  padding: 10px 28px;
-  width: 200px;
-  height: 50px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: 0px;
-  border-radius: 4px;
-  background-color: var(--accent-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  color: var(--primary-white-color);
-}
-
-.icon-send {
-  margin-left: 10px;
 }
 
 .copyright {
@@ -873,131 +1126,79 @@ address a {
   text-align: center;
 }
 
-/* СТРАНИЦА portfolio.html */
-
-.header-portfolio {
-  border-bottom: 1px solid #ececec;
-}
-
-/* потрфолио */
-
-.portfolio {
-  padding: 94px 0px;
-}
-
-.nav-filters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0px;
-}
-
-.button {
-  margin-right: 8px;
-  padding: 6px 22px;
-  border-radius: 4px;
-  border: 0;
-  color: var(--title-text-color);
-  background-color: #f5f4fa;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
-  cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button:nth-child(5n) {
-  margin-right: 0px;
-}
-
-.button:hover,
-.button:focus {
+.label-subscription {
+  margin-left: 94px;
   color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 3px 1px rgba(0, 0, 0, 0.1);
-}
-
-/* примеры работ */
-
-.examples-flex {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 50px;
-}
-
-.examples-item {
-  width: 380px;
-  margin-bottom: 30px;
-  margin-right: 30px;
-  border-radius: 5px;
-  overflow: hidden;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.examples-item:nth-child(3n) {
-  margin-right: 0px;
-}
-
-.examples-item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
-
-.examples-item:hover,
-.examples-item:focus {
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-}
-
-.box {
-  position: relative;
-  overflow: hidden;
-}
-
-.examples-text {
-  display: inline-flex;
-  position: absolute;
-  padding: 63px 24px;
-  margin: 0;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-  background-color: rgba(33, 150, 243, 0.9);
-  color: var(--primary-white-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.examples-item:hover .examples-text,
-.examples-item:focus .examples-text {
-  transform: translateY(-100%);
-  z-index: 3;
-}
-
-.examples-info {
-  border: 1px solid #eeeeee;
-  border-top: transparent;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding: 20px 24px;
-}
-
-.examples-title {
-  margin: 0px;
-  color: var(--title-text-color);
   font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-.examples-subtitle {
-  margin-top: 4px;
-  color: var(--primary-text-color);
+.form-subscription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 94px;
+}
+
+.form-subscription input {
+  padding: 18px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  width: 358px;
+  height: 50px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.87;
   letter-spacing: 0.03em;
+  background-color: #2f303a;
 }
+
+.form-subscription input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-subscription input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-subscription input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-subscription input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-subscription button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 12px;
+  padding: 10px 28px;
+  width: 200px;
+  height: 50px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 0px;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+}
+
+.icon-send {
+  margin-left: 10px;
+}
+/*# sourceMappingURL=main.css.map */

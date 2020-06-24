@@ -7,21 +7,17 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&amp;family=Roboto:wght@400;500;700;900&amp;display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
-    />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <title>Студия</title>
   </head>
 
-  <body>
+  <body class="body">
     <!-- Шапка сайта -->
     <header class="header">
       <div class="container">
         <div class="header-flex">
           <nav class="site-nav">
-            <a lang="en" href="./index.html" class="logo"
+            <a class="link logo" lang="en" href="./index.html" 
               ><span class="web">Web</span> Studio</a
             >
             <ul class="main-nav list">
@@ -60,8 +56,9 @@
           </h1>
           <button data-open-modal class="hero-button">Заказать услугу</button>
           <div class="backdrop is-hidden" data-backdrop>
-            <form class="modal js-speaker-form" autocomplete="off">
-              <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+            <div class="modal js-speaker-form">
+            <form class="modal" autocomplete="off">
+              <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
               <div class="form-field">
         <span class="form-icon">
           <svg class="icon-modal-mail" width=15 height=12>
@@ -131,13 +128,14 @@
               <button class="btn-close" data-close-modal></button>
             </form>
             </div>
+            </div>
           </div>
         </div>
       </section>
       <!-- Преимущества -->
       <section class="benefits">
         <div class="container">
-          <h2 class="visually-hidden">Преимущества</h2>
+          <h2 class="visually-hidden benefits-title">Преимущества</h2>
           <ul class="benefits-flex list">
             <li class="benefits-item">
               <svg class="benefits-icon">
@@ -189,6 +187,7 @@
           <ul class="products-flex list">
             <li class="products-item">
               <img
+              class="image"
                 src="./images/devices/laptop.jpg"
                 alt="Открытая программа на экране ноутбука"
                 width="370"
@@ -198,6 +197,7 @@
             </li>
             <li class="products-item">
               <img
+              class="image"
                 src="./images/devices/phone.jpg"
                 alt="Смартфон c открытым мобильным приложением"
                 width="370"
@@ -207,6 +207,7 @@
             </li>
             <li class="products-item">
               <img
+              class="image"
                 src="./images/devices/computer.jpg"
                 alt="Экран компьютера с дизайном на рабочем столе"
                 width="370"
@@ -508,7 +509,7 @@
                 >г. Киев, пр-т Леси Украинки, 26</a
               >
             </address>
-            <ul class="footer contacts list">
+            <ul class="footer-contacts list">
               <li class="footer-contacts-link">
                 <a class="contacts-link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a

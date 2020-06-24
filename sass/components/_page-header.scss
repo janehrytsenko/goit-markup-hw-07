@@ -1,0 +1,30 @@
+.container {
+  @extend %container;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* лого */
+
+.logo {
+  @extend %link;
+  padding: 24px 0px;
+  color: $title-text-color;
+  font-family: $font-family-secondary;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+}
+
+.web {
+  color: $accent-color;
+}
