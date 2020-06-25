@@ -22,10 +22,6 @@
   list-style: none;
 }
 
-%text {
-  margin: 0px;
-}
-
 %image {
   display: block;
   max-width: 100%;
@@ -46,13 +42,16 @@
   display: inline-block;
   align-items: center;
   padding: 10px 32px;
+  min-width: 200px;
+  min-height: 50px;
   border: 0px;
   border-radius: 4px;
+  font-family: $font-family-primary;
   color: $primary-white-color;
   background-color: $accent-color;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.87;
   letter-spacing: 0.06em;
   cursor: pointer;
 }

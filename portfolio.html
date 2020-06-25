@@ -7,17 +7,13 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&amp;family=Roboto:wght@400;500;700;900&amp;display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
-    />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <title>Портфолио</title>
   </head>
 
   <body>
     <!-- Шапка сайта -->
-    <header class="header">
+    <header class="portfolio-header">
       <div class="container">
         <div class="header-flex">
           <nav class="site-nav">
@@ -55,14 +51,14 @@
     </header>
     <main>
       <section class="portfolio container">
-        <h1 class="visually-hidden">Портфолио</h1>
+        <h1 class="portfolio-title">Портфолио</h1>
         <!-- Фильтры -->
         <div class="portfolio nav-filters">
-          <button type="button" class="button">Все</button>
-          <button type="button" class="button">Веб-сайты</button>
-          <button type="button" class="button">Приложения</button>
-          <button type="button" class="button">Дизайн</button>
-          <button type="button" class="button">Маркетинг</button>
+          <button type="button" class="portfolio-button">Все</button>
+          <button type="button" class="portfolio-button">Веб-сайты</button>
+          <button type="button" class="portfolio-button">Приложения</button>
+          <button type="button" class="portfolio-button">Дизайн</button>
+          <button type="button" class="portfolio-button">Маркетинг</button>
         </div>
         <!-- Примеры работ -->
         <ul class="examples-flex list">
@@ -73,6 +69,7 @@
                   src="./images/examples/notebook.jpg"
                   alt="Открытый веб-сайт на экране ноутбука"
                   width="380"
+                  class="image"
                 />
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
@@ -93,6 +90,7 @@
                   src="./images/examples/poster.jpg"
                   alt="Дизайн постера с баскетболистами"
                   width="380"
+                  class="image"
                 />
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
@@ -115,6 +113,7 @@
                   src="./images/examples/seafood.jpg"
                   alt="Приложение для ресторана с морской кухней"
                   width="380"
+                  class="image"
                 />
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
@@ -135,6 +134,7 @@
                   src="./images/examples/headphones.jpg"
                   alt="Наушники"
                   width="380"
+                  class="image"
                 />
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
@@ -155,6 +155,7 @@
                   src="./images/examples/boxes.jpg"
                   alt="Приложение Боксес"
                   width="380"
+                  class="image"
                 />
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
@@ -175,6 +176,7 @@
                   src="./images/examples/imac.jpg"
                   alt="Веб-сайт на экране монитора"
                   width="380"
+                  class="image"
                 />
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
@@ -195,6 +197,7 @@
                   src="./images/examples/limited-edition.jpg"
                   alt="Дизайн для издания в виде открытой книги"
                   width="380"
+                  class="image"
                 />
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
@@ -215,6 +218,7 @@
                   src="./images/examples/lab.jpg"
                   alt="Белый лэйб с английскими буквами названия проекта маркетинга"
                   width="380"
+                  class="image"
                 />
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
@@ -235,6 +239,7 @@
                   src="./images/examples/laptop.jpg"
                   alt="Открытое приложение на экране ноутбука"
                   width="380"
+                  class="image"
                 />
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
@@ -267,7 +272,7 @@
                 >г. Киев, пр-т Леси Украинки, 26</a
               >
             </address>
-            <ul class="footer contacts list">
+            <ul class="footer-contacts list">
               <li class="footer-contacts-link">
                 <a class="contacts-link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
@@ -329,7 +334,7 @@
               </li>
             </ul>
           </div>
-        <form class="form js-speaker-form">
+          <form class="form js-speaker-form" autocomplete="off">
         <label for="mail" class="label-subscription">подпишитесь на рассылку</label>
         </br>
         <div class="form-subscription">
@@ -339,15 +344,9 @@
           id="mail"
           placeholder="E-mail"
         />
-        <button type="submit">Подписаться<svg class="icon-send" width="24" height="24">
+        <button type="submit">Подписаться<svg class="icon-send">
           <use href="./images/sprite.svg#send"></use></svg>
         </button>
-      </div>
-        </div>
-        <p class="copyright">
-          2020 | Developed by GoIT Students
-        </p>
-      </div>
       </div>
     </footer>
     <script>

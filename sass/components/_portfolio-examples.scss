@@ -1,0 +1,91 @@
+.examples-flex {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.examples-item {
+  @extend %link;
+  width: 380px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:nth-child(3n) {
+    margin-right: 0px;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0px;
+  }
+
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+  }
+
+  &:hover .examples-text,
+  &:focus .examples-text {
+    transform: translateY(-100%);
+    z-index: 3;
+  }
+}
+
+.image {
+  @extend %image;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+}
+
+.examples-text {
+  display: inline-flex;
+  position: absolute;
+  padding: 63px 24px;
+  margin: 0;
+  font-family: $font-family-primary;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: $primary-white-color;
+  transition: $transition-form;
+}
+
+.examples-info {
+  border: 1px solid #eeeeee;
+  border-top: transparent;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 20px 24px;
+}
+
+.examples-title {
+  margin: 0px;
+  color: $title-text-color;
+  font-family: $font-family-primary;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.examples-subtitle {
+  margin-top: 4px;
+  color: $primary-text-color;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+}
